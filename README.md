@@ -3,3 +3,14 @@
 - Anaconda
 - Vs Code
 - Git
+
+# Git Command
+git Clone URL
+git add .
+git commit -m "comment here"
+git push origin main
+
+# Create Environment using Conda
+conda create -n {environment name} python={version} -y
+conda activate {environment name}
+pip install -r requirements.txt
