@@ -2,4 +2,4 @@
 
 - Anaconda
 - Vs Code
-- Git:
+- Git
