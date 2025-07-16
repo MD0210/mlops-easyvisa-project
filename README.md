@@ -5,6 +5,8 @@
 - Git
 - evidentlyai
 - MongoDB
+- Data link: https://www.kaggle.com/datasets/moro23/easyvisa-dataset
+
 
 # Git Command
 - git Clone URL 
