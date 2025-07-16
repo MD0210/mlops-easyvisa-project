@@ -3,6 +3,8 @@
 - Anaconda
 - Vs Code
 - Git
+- evidentlyai
+- MongoDB
 
 # Git Command
 - git Clone URL 
