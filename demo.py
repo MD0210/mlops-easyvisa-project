@@ -1,4 +1,6 @@
-import us_visa.pipeline.training_pipeline as TrainingPipeline
+from us_visa.pipeline.training_pipeline import TrainingPipeline
 
-obj=TrainingPipeline()
+obj = TrainingPipeline()
 obj.run_pipeline()
+
+

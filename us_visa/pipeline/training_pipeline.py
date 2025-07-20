@@ -34,3 +34,4 @@ class TrainingPipeline:
             data_ingestion_artifact = self.start_data_ingestion()
         except Exception as e:
             raise USvisaException(e, sys) from e
+        
