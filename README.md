@@ -23,3 +23,6 @@
 # Workflow
 1. constants
 2. entity
+
+# Export the environment variable using git bash
+- export MONGODB_URL="mongodb+srv://<username>:<password>...."
