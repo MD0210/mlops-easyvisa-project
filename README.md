@@ -3,7 +3,7 @@
 - Anaconda
 - Vs Code
 - Git
-- evidentlyai
+- Evidently AI
 - MongoDB
 - Data link: https://www.kaggle.com/datasets/moro23/easyvisa-dataset
 
@@ -19,3 +19,7 @@
 - conda init
 - conda activate {environment name}
 - pip install -r requirements.txt #this is inside the environment
+
+# Workflow
+1. constants
+2. entity
