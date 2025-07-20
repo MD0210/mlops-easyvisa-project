@@ -1,4 +1,4 @@
-import os
+import us_visa.pipeline.training_pipeline as TrainingPipeline
 
-mongo_db_url = os.getenv('MONGODB_URL')
-print(mongo_db_url)
+obj=TrainingPipeline()
+obj.run_pipeline()
