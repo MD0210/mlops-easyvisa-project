@@ -20,12 +20,14 @@
 - conda activate {environment name}
 - pip install -r requirements.txt #this is inside the environment
 
+# Export the environment variable using git bash
+- export MONGODB_URL="mongodb+srv://<username>:<password>...."
+
 # Workflow
 1. constants
 2. entity
 3. components
 4. pipeline
+5. Main file
 
 
-# Export the environment variable using git bash
-- export MONGODB_URL="mongodb+srv://<username>:<password>...."
