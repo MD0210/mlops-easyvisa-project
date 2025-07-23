@@ -13,7 +13,7 @@ from us_visa.entity.artifact_entity import DataTransformationArtifact, DataInges
 from us_visa.exception import USvisaException
 from us_visa.logger import logging
 from us_visa.utils.main_utils import save_object, save_numpy_array_data, read_yaml_file, drop_columns
-from us_visa.entity.mapping import TargetValueMapping
+from us_visa.entity.estimator import TargetValueMapping
 
 class DataTransformation:
     def __init__(self, data_ingestion_artifact: DataIngestionArtifact,
