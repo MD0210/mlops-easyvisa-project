@@ -1,4 +1,4 @@
-# MLOPs-Project
+# mlops-easyvisa-project
 
 - Anaconda
 - Vs Code
@@ -6,7 +6,6 @@
 - Evidently AI
 - MongoDB
 - Data link: https://www.kaggle.com/datasets/moro23/easyvisa-dataset
-
 
 # Git Command
 - git Clone URL 
@@ -29,5 +28,3 @@
 3. components
 4. pipeline
 5. Main file
-
-
