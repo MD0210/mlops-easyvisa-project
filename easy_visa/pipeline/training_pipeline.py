@@ -1,13 +1,13 @@
 import sys
-from us_visa.exception import USvisaException
-from us_visa.logger import logging
-from us_visa.components.data_ingestion import DataIngestion
-from us_visa.components.data_validation import DataValidation
-from us_visa.components.data_transformation import DataTransformation
-from us_visa.components.model_trainer import ModelTrainer
+from easy_visa.exception import EasyvisaException
+from easy_visa.logger import logging
+from easy_visa.components.data_ingestion import DataIngestion
+from easy_visa.components.data_validation import DataValidation
+from easy_visa.components.data_transformation import DataTransformation
+from easy_visa.components.model_trainer import ModelTrainer
 
-from us_visa.entity.config_entity import (DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig)
-from us_visa.entity.artifact_entity import (DataIngestionArtifact,DataValidationArtifact,DataTransformationArtifact,ModelTrainerArtifact)
+from easy_visa.entity.config_entity import (DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig)
+from easy_visa.entity.artifact_entity import (DataIngestionArtifact,DataValidationArtifact,DataTransformationArtifact,ModelTrainerArtifact)
 
 class TrainingPipeline:
     def __init__(self):
@@ -29,7 +29,7 @@ class TrainingPipeline:
             logging.info("Exited the start_data_ingestion method of TrainPipeline class")
             return data_ingestion_artifact
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
         
 
     def start_data_validation(self, data_ingestion_artifact: DataIngestionArtifact) -> DataValidationArtifact:  
@@ -47,7 +47,7 @@ class TrainingPipeline:
             logging.info("Exited the start_data_validation method of TrainPipeline class")
             return data_validation_artifact
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
 
 
     def start_data_transformation(self, data_ingestion_artifact: DataIngestionArtifact, data_validation_artifact: DataValidationArtifact) -> DataTransformationArtifact:  
@@ -66,7 +66,7 @@ class TrainingPipeline:
             logging.info("Exited the start_data_transformation method of TrainPipeline class")
             return data_transformation_artifact
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
 
 
     def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
@@ -84,7 +84,7 @@ class TrainingPipeline:
             logging.info("Exited the start_model_trainer method of TrainPipeline class")
             return model_trainer_artifact
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
 
     def run_pipeline(self, ) -> None:
         """
@@ -101,5 +101,5 @@ class TrainingPipeline:
                 data_transformation_artifact=data_transformation_artifact
             )
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
         

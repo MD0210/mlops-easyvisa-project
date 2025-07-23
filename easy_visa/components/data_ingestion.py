@@ -2,11 +2,11 @@ import os
 import sys
 from pandas import DataFrame
 from sklearn.model_selection import train_test_split
-from us_visa.entity.config_entity import DataIngestionConfig
-from us_visa.entity.artifact_entity import DataIngestionArtifact
-from us_visa.exception import USvisaException
-from us_visa.logger import logging
-from us_visa.data_access.usvisa_data import USvisaData
+from easy_visa.entity.config_entity import DataIngestionConfig
+from easy_visa.entity.artifact_entity import DataIngestionArtifact
+from easy_visa.exception import EasyvisaException
+from easy_visa.logger import logging
+from easy_visa.data_access.easyvisa_data import EasyvisaData
 
 
 
@@ -18,7 +18,7 @@ class DataIngestion:
         try:
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
-            raise USvisaException(e,sys)
+            raise EasyvisaException(e,sys)
         
 
     
@@ -32,8 +32,8 @@ class DataIngestion:
         """
         try:
             logging.info(f"Exporting data from mongodb")
-            usvisa_data = USvisaData()
-            dataframe = usvisa_data.export_collection_as_dataframe(collection_name=
+            easyvisa_data = EasyvisaData()
+            dataframe = easyvisa_data.export_collection_as_dataframe(collection_name=
                                                                    self.data_ingestion_config.collection_name)
             logging.info(f"Shape of dataframe: {dataframe.shape}")
             feature_store_file_path  = self.data_ingestion_config.feature_store_file_path
@@ -44,7 +44,7 @@ class DataIngestion:
             return dataframe
 
         except Exception as e:
-            raise USvisaException(e,sys)
+            raise EasyvisaException(e,sys)
         
 
     def split_data_as_train_test(self,dataframe: DataFrame) ->None:
@@ -72,7 +72,7 @@ class DataIngestion:
 
             logging.info(f"Exported train and test file path.")
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
         
 
 
@@ -106,4 +106,4 @@ class DataIngestion:
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact
         except Exception as e:
-            raise USvisaException(e, sys) from e
+            raise EasyvisaException(e, sys) from e
