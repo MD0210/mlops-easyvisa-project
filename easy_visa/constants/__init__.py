@@ -67,3 +67,6 @@ Model Evaluation related constants
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.2
 MODEL_BUCKET_NAME: str = "easyvisa-model2025"
 MODEL_PUSHER_S3_KEY: str = "model-registry"
+
+APP_HOST = "0.0.0.0"
+APP_PORT = 8080
