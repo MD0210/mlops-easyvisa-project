@@ -84,3 +84,4 @@ setting>actions>runner>new self hosted runner> choose os> then run command one b
 - AWS_SECRET_ACCESS_KEY
 - AWS_DEFAULT_REGION
 - ECR_REPO
+- MONGODB_URL
