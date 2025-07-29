@@ -1,23 +1,81 @@
 # mlops-easyvisa-project
 
-- Anaconda
-- Vs Code
-- Git
-- Evidently AI
-- MongoDB
-- Data link: https://www.kaggle.com/datasets/moro23/easyvisa-dataset
+# 🧳 MLOps EasyVisa Project
+
+Predicting U.S. visa application outcomes—**Certified** or **Denied**—using machine learning and a robust MLOps pipeline deployed on AWS.
+
+## 📂 Dataset
+Source: [EasyVisa Dataset on Kaggle](https://www.kaggle.com/datasets/moro23/easyvisa-dataset/data)
+
+---
+
+## ⚙️ Tech Stack & Tools
+
+- **Language:** Python (Object-Oriented Programming)
+- **MLOps Framework:** GitHub Actions, Docker, AWS (EC2, ECR, S3)
+- **IDE & Environment:** VS Code, Anaconda
+- **Data & Monitoring:** MongoDB, Evidently AI
+
+---
+
+## 🚀 CI/CD Deployment Flow
+
+1. 🏗️ **Build** Docker image from source code
+2. 📦 **Push** Docker image to AWS ECR (`easyvisarepo`)
+3. 🖥️ **Launch** EC2 Ubuntu instance
+4. 📥 **Pull** image from ECR to EC2
+5. 🧠 **Run** container to start ML inference service
+6. 🤖 **Trigger** GitHub Actions for automated deployment
+
+---
+
+## 🛠️ Project Structure
+
+```bash
+📁 github/workflows/
+📁 artifacts/
+📁 config/
+📁 cloud_storage/
+📁 components/
+📁 configuration/
+📁 constants/
+📁 data_access/
+📁 entity/
+📁 exception/
+📁 logger/
+📁 pipeline/
+📁 utils/
+📁 flowcharts/
+📁 templates/
+📄 app.py
 
 # Git Command
+```bash
 - git Clone URL 
+
 - git add .
+
 - git commit -m "comment here"
+
 - git push origin main
+```
 
 # Create Environment using Conda
+```bash
 - conda create -n {environment name} python={version} -y
+```
+
+```bash
 - conda init
+```
+
+```bash
 - conda activate {environment name}
-- pip install -r requirements.txt #this is inside the environment
+```
+
+```bash
+- pip install -r requirements.txt  #this is inside the environment
+```
 
 # Workflow
 1. constants
@@ -27,9 +85,15 @@
 5. Main file
 
 # Export the environment variable using git bash
+```bash
+
 - export MONGODB_URL="mongodb+srv://<username>:<password>...."
+
 - export AWS_ACCESS_KEY_ID = <AWS_ACCESS_KEY_ID>
+
 - export AWS_SECRET_ACCESS_KEY = <AWS_SECRET_ACCESS_KEY>
+
+```
 
 # AWS-CICD-Deployment-with-Github-Actions
 ## 1. Login to AWS console.
@@ -59,9 +123,13 @@
 
 2. AmazonEC2FullAccess
 ## 3. Create ECR repo to store/save docker image
+```bash
 - Save the URI: 699444791123.dkr.ecr.us-east-1.amazonaws.com/easyvisarepo
+```
 ## 4. Create EC2 machine (Ubuntu)
 ## 5. Open EC2 and Install docker in EC2 Machine:
+
+```bash
 #optinal
 
 sudo apt-get update -y
@@ -77,8 +145,12 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
+```
+
 ## 6. Configure EC2 as self-hosted runner:
-setting>actions>runner>new self hosted runner> choose os> then run command one by one
+```bash
+```
+
 ## 7. Setup github secrets:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
