@@ -48,6 +48,8 @@ Source: [EasyVisa Dataset on Kaggle](https://www.kaggle.com/datasets/moro23/easy
 📁 flowcharts/
 📁 templates/
 📄 app.py
+```
+
 
 # Git Command
 ```bash
