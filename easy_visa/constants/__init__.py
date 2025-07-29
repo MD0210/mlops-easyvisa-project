@@ -69,4 +69,4 @@ MODEL_BUCKET_NAME: str = "easyvisa-model2025"
 MODEL_PUSHER_S3_KEY: str = "model-registry"
 
 APP_HOST = "0.0.0.0"
-APP_PORT = 8080
+APP_PORT = 8081
