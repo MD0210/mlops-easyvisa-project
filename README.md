@@ -1,6 +1,4 @@
-# mlops-easyvisa-project
-
-# 🧳 MLOps EasyVisa Project
+# 🧳 mlops-easyvisa-project
 
 Predicting U.S. visa application outcomes—**Certified** or **Denied**—using machine learning and a robust MLOps pipeline deployed on AWS.
 
